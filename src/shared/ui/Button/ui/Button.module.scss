@@ -1,4 +1,36 @@
-.Button{
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+.Button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: none;
+    outline: none;
+    padding: var(--spacing);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+.Button.outline {
+  color: var(--primary-color);
+  border: var(--btn-outline-thickness) solid var(--primary-color);
+  border-radius: calc(var(--radius) * 3);
+}
+.Button.outline:hover {
+  opacity: .8;
+}
+.Button:not(.Button-selected):hover {
+    background-color: color-mix(in srgb, var(--btn-bg-color), transparent);
+}
+.Button-selected {
+  background-color: var(--btn-bg-color);
+  --primary-color: #000 
+}
+.all-categories {
+    --btn-bg-color: #90bee9;
+}
+.news-category {
+    --btn-bg-color: #9de990;
+}
+.teacher-category {
+    --btn-bg-color: #e9c090;
+}
+.help-category {
+    --btn-bg-color: #db90e9;
 }
