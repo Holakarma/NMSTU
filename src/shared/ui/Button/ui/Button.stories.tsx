@@ -23,6 +23,7 @@ export const Light: Story = {
         className: cls.Button,
         children: "Press me",
     },
+    decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 export const Dark: Story = {
     args: {
