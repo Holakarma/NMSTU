@@ -8,19 +8,19 @@
     cursor: pointer;
 }
 .Button.outline {
-  color: var(--primary-color);
-  border: var(--btn-outline-thickness) solid var(--primary-color);
-  border-radius: calc(var(--radius) * 3);
+    color: var(--primary-color);
+    border: var(--btn-outline-thickness) solid var(--primary-color);
+    border-radius: calc(var(--radius) * 3);
 }
 .Button.outline:hover {
-  opacity: .8;
+    opacity: 0.8;
 }
-.Button:not(.Button-selected):hover {
+.Button:not(.Button-selected):not(.disabled):hover {
     background-color: color-mix(in srgb, var(--btn-bg-color), transparent);
 }
 .Button-selected {
-  background-color: var(--btn-bg-color);
-  --primary-color: #000 
+    background-color: var(--btn-bg-color);
+    --primary-color: #000;
 }
 .all-categories {
     --btn-bg-color: #90bee9;
@@ -33,4 +33,8 @@
 }
 .help-category {
     --btn-bg-color: #db90e9;
+}
+.Button.disabled {
+    opacity: 0.8;
+    cursor: default;
 }
